@@ -12,15 +12,18 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #36454F;
+  
 }
 .container{
     width: 100%;
+    
     max-width: 600px;
 
     background: #fff;
     position: relative;
     padding-top: 40px;
     border-radius: 10px;
+    overflow: hidden;
 }
 .menu{
     display: flex;
@@ -43,6 +46,16 @@ right: 35px;
 
 label .fa-sun{
     display: none;
+}
+#check:checked ~ .container .menu label .fa-sun{
+    display: block;
+}
+#check:checked ~ .container .menu label .fa-moon {
+    display: none;
+}
+#check:checked~.container{
+    color: #fff;
+    background: #191919;
 }
 .user{
     position: relative;
@@ -68,6 +81,7 @@ left: -12px;
     width: inherit;
     object-fit: cover;
     border-radius: 50%;
+   
 }
 .username{
     text-align: center;
@@ -119,4 +133,22 @@ button{
     background-color: #c70039;
     top: -45px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+button:hover{
+    transition: 0.2s;
+    transform: scale(1.1) translateX(-50%);
+    left: 52%;
+}
+p{
+    text-align: center;
+    font-size: 1.2em;
+    opacity: 0.6;
+}
+.downpart i{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
 }
